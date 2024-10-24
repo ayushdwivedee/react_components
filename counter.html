@@ -13,10 +13,11 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     // Your  code will go here
-    let root= React.createRoot(document.getElementById("root"))
-    reactDOM.render(root)
+    let root=  document.getElementById("root")
+    
 
-    let buttonWithCounter=()=>{
+    let ButtonWithCounter=()=>{
+        //here i have faced naming convention of a component
         const [count , setCount]=React.useState(0)
         return (
             <>
@@ -26,5 +27,7 @@
             </>
         )
     }
+    ReactDOM.createRoot(root).render(<ButtonWithCounter/>)
+    //i should use like this <App/> rather than this app to mount the component in UI
   </script>
 </html>
